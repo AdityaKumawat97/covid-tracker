@@ -3,18 +3,19 @@ import { Card, CardContent, Typography, Grid } from '@material-ui/core'
 import styles from './Cards.module.css'
 import CountUp from 'react-countup'
 import cx from 'classnames'
+import { LinearProgress } from '@material-ui/core';
 //cx is a classname library aleady present which helps us set multipple classes to a single jsx element
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     // console.log()
     if (!confirmed) {
-        return "loading..."
+        return "Loading..."
     }
 
     return (
 
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
-                <Grid item component={Card} xs={12} md={3} className= {cx(styles.card, styles.infected)}>
+                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
                             {/* gutterbottom is used to provide padding on the bottom */}
@@ -33,7 +34,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                     </CardContent>
                 </Grid>
 
-                <Grid item component={Card} xs={12} md={3} className= {cx(styles.card, styles.recovered)}>
+                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.recovered)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
                             {/* gutterbottom is used to provide padding on the bottom */}
@@ -52,7 +53,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                     </CardContent>
                 </Grid>
 
-                <Grid item component={Card} xs={12} md={3} className= {cx(styles.card, styles.deaths)}>
+                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
                             {/* gutterbottom is used to provide padding on the bottom */}
