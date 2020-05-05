@@ -23,12 +23,12 @@ handleCountryChange = async (country) =>{
 }
 
     render() {
-        const { data } = this.state
+        const { data, country } = this.state
         return (
             <div className={styles.container}>
                 <Cards data={data} />
                 <CountryPicker handleCountryChange={this.handleCountryChange} />
-                <Chart />
+                <Chart data={data} country={country} />
             </div>
         );
     }
