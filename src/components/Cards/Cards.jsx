@@ -15,7 +15,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
 
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
+                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected, styles.shadow)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
                             {/* gutterbottom is used to provide padding on the bottom */}
